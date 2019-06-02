@@ -28,7 +28,7 @@ public class PlanetWeight{
 
 		System.out.println("Lets get started....");
 		System.out.println("Enter your weight in lbs");
-		System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+		//System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 		System.out.print("Entry: ");
 		float myWeight = in.nextInt();
 		in.nextLine();
@@ -36,17 +36,17 @@ public class PlanetWeight{
 		do{
 		    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 			System.out.println("OPTIONS");	        //Menu
-			System.out.println("'1' to find out your weight on the sun");	
-			System.out.println("'2' to find out your weight on Mercury");
-			System.out.println("'3' to find out your weight on Venus");
-			System.out.println("'4' to find out your weight on the moon");
-			System.out.println("'5' to find out your weight on Mars");
-			System.out.println("'6' to find out your weight on Jupiter");
-			System.out.println("'7' to find out your weight on Saturn");
-			System.out.println("'8' to find out your weight on Uranus");
-			System.out.println("'9' to find out your weight on Neptune");
-			System.out.println("'10' to find out your weight on Pluto");
-			System.out.println("'0' to quit");
+			System.out.println("'Sun' to find out your weight on the sun");	
+			System.out.println("'Mercury' to find out your weight on Mercury");
+			System.out.println("'Venus' to find out your weight on Venus");
+			System.out.println("'Moon' to find out your weight on the moon");
+			System.out.println("'Mars' to find out your weight on Mars");
+			System.out.println("'Jupiter' to find out your weight on Jupiter");
+			System.out.println("'Saturn to find out your weight on Saturn");
+			System.out.println("'Uranus' to find out your weight on Uranus");
+			System.out.println("'Neptune' to find out your weight on Neptune");
+			System.out.println("'Pluto' to find out your weight on Pluto");
+			System.out.println("'q' or 'quit' to exit");
 			System.out.println("'weight' to change your weight");
 			System.out.println("'help' to show this message again");
 
@@ -55,39 +55,40 @@ public class PlanetWeight{
 
 				System.out.print("Entry: ");
 				choice = in.nextLine();
+                choice = choice.toLowerCase();
 
 				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
-				if(choice.equals("1")){
-					System.out.println("Your weight on the Sun is " + myWeight * SUN + " lbs");
+				if(choice.equals("sun")){
+					System.out.printf("Your weight on the Sun: %17.2f lbs\n", myWeight * SUN);
 				}
-				else if(choice.equals("2")){
-					System.out.println("Your weight on Mercury is " + myWeight * MERCURY + " lbs");
+				else if(choice.equals("mercury")){
+					System.out.printf("Your weight on Mercury: %17.2f lbs\n", myWeight * MERCURY);
 				}
-				else if(choice.equals("3")){
-					System.out.println("Your weight on Venus is " + myWeight * VENUS + " lbs");
+				else if(choice.equals("venus")){
+					System.out.printf("Your weight on Venus: %19.2f lbs\n", myWeight * VENUS);
 				}
-				else if(choice.equals("4")){
-					System.out.println("Your weight on the Moon is " + myWeight * MOON + " lbs");
+				else if(choice.equals("moon")){
+					System.out.printf("Your weight on the Moon: %16.2f lbs\n", myWeight * MOON);
 				}
-				else if(choice.equals("5")){
-					System.out.println("Your weight on Mars is " + myWeight * MARS + " lbs");
+				else if(choice.equals("mars")){
+					System.out.printf("Your weight on Mars: %20.2f lbs\n", myWeight * MARS);
 				}
-				else if(choice.equals("6")){
-					System.out.println("Your weight on Jupiter is " + myWeight * JUPITER + " lbs");
+				else if(choice.equals("jupiter")){
+					System.out.printf("Your weight on Jupiter: %17.2f lbs\n", myWeight * JUPITER);
 				}
-				else if(choice.equals("7")){
-					System.out.println("Your weight on Saturn is " + myWeight * SATURN + " lbs");
+				else if(choice.equals("saturn")){
+					System.out.printf("Your weight on Saturn: %18.2f lbs\n", myWeight * SATURN);
 				}
-				else if(choice.equals("8")){
-					System.out.println("Your weight on Uranus is " + myWeight * URANUS + " lbs");
+				else if(choice.equals("uranus")){
+					System.out.printf("Your weight on Uranus: %18.2f lbs\n", myWeight * URANUS);
 				}
-				else if(choice.equals("9")){
-					System.out.println("Your weight on Neptune is " + myWeight * NEPTUNE + " lbs");
+				else if(choice.equals("neptune")){
+					System.out.printf("Your weight on Neptune: %17.2f lbs\n", myWeight * NEPTUNE);
 				}
-				else if(choice.equals("10")){
-					System.out.println("Your weight on Pluto is " + myWeight * PLUTO + " lbs");
+				else if(choice.equals("pluto")){
+					System.out.printf("Your weight on Pluto: %19.2f lbs\n", myWeight * PLUTO);
 				}
-				else if(choice.equals("0")){
+				else if(choice.equals("quit") || choice.equals("q")){
 					break;
 				}
 				else if(choice.equals("weight")){
@@ -103,7 +104,7 @@ public class PlanetWeight{
 				else{
 					System.err.println("Please enter valid option!!");
 				}
-			}while(!choice.equals("0") || !choice.equals("weight"));
+			}while(!choice.equals("weight") || !choice.equals("quit") || !choice.equals("q"));
 		}while(choice.equals("help") || choice.equals("weight"));
 		System.out.println("Now logging off...");
 	}
