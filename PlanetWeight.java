@@ -59,34 +59,34 @@ public class PlanetWeight{
 
 				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 				if(choice.equals("sun")){
-					System.out.printf("Your weight on the Sun: %17.2f lbs\n", myWeight * SUN);
+					System.out.printf("Your weight on the Sun:  %16.2f lbs\n", myWeight * SUN);
 				}
 				else if(choice.equals("mercury")){
-					System.out.printf("Your weight on Mercury: %17.2f lbs\n", myWeight * MERCURY);
+					System.out.printf("Your weight on Mercury:  %16.2f lbs\n", myWeight * MERCURY);
 				}
 				else if(choice.equals("venus")){
-					System.out.printf("Your weight on Venus: %19.2f lbs\n", myWeight * VENUS);
+					System.out.printf("Your weight on Venus:    %16.2f lbs\n", myWeight * VENUS);
 				}
 				else if(choice.equals("moon")){
 					System.out.printf("Your weight on the Moon: %16.2f lbs\n", myWeight * MOON);
 				}
 				else if(choice.equals("mars")){
-					System.out.printf("Your weight on Mars: %20.2f lbs\n", myWeight * MARS);
+					System.out.printf("Your weight on Mars:     %16.2f lbs\n", myWeight * MARS);
 				}
 				else if(choice.equals("jupiter")){
-					System.out.printf("Your weight on Jupiter: %17.2f lbs\n", myWeight * JUPITER);
+					System.out.printf("Your weight on Jupiter:  %16.2f lbs\n", myWeight * JUPITER);
 				}
 				else if(choice.equals("saturn")){
-					System.out.printf("Your weight on Saturn: %18.2f lbs\n", myWeight * SATURN);
+					System.out.printf("Your weight on Saturn:   %16.2f lbs\n", myWeight * SATURN);
 				}
 				else if(choice.equals("uranus")){
-					System.out.printf("Your weight on Uranus: %18.2f lbs\n", myWeight * URANUS);
+					System.out.printf("Your weight on Uranus:   %16.2f lbs\n", myWeight * URANUS);
 				}
 				else if(choice.equals("neptune")){
-					System.out.printf("Your weight on Neptune: %17.2f lbs\n", myWeight * NEPTUNE);
+					System.out.printf("Your weight on Neptune:  %16.2f lbs\n", myWeight * NEPTUNE);
 				}
 				else if(choice.equals("pluto")){
-					System.out.printf("Your weight on Pluto: %19.2f lbs\n", myWeight * PLUTO);
+					System.out.printf("Your weight on Pluto:    %16.2f lbs\n", myWeight * PLUTO);
 				}
 				else if(choice.equals("quit") || choice.equals("q")){
 					break;
