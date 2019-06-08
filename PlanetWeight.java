@@ -30,8 +30,8 @@ public class PlanetWeight{
 		System.out.println("Enter your weight in lbs");
 		//System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 		System.out.print("Entry: ");
-		float myWeight = in.nextInt();
-		in.nextLine();
+		float myWeight = in.nextFloat();
+		//in.nextLine();
 		String choice;
 		do{
 		    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
@@ -54,7 +54,7 @@ public class PlanetWeight{
 				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 
 				System.out.print("Entry: ");
-				choice = in.nextLine();
+				choice = in.next();
                 choice = choice.toLowerCase();
 
 				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
@@ -94,8 +94,8 @@ public class PlanetWeight{
 				else if(choice.equals("weight")){
 					System.out.println("Enter your new weight");
 				    System.out.print("Entry: ");
-                    myWeight = in.nextInt();
-		            in.nextLine();
+                    myWeight = in.nextFloat();
+		            //in.nextLine();
                     break;
 				}
 				else if(choice.equals("help")){
