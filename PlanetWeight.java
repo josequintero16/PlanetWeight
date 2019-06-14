@@ -30,9 +30,11 @@ public class PlanetWeight{
 		System.out.println("Enter your weight in lbs");
 		//System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 		System.out.print("Entry: ");
-		float myWeight = in.nextFloat();
+		double myWeight = in.nextDouble();
 		//in.nextLine();
-		String choice;
+		double constant = 0;
+		String choice, body = "";
+		boolean error = false;
 		do{
 		    System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 			System.out.println("OPTIONS");	        //Menu
@@ -51,6 +53,7 @@ public class PlanetWeight{
 			System.out.println("'help' to show this message again");
 
 			do{
+				error = false;
 				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 
 				System.out.print("Entry: ");
@@ -59,34 +62,44 @@ public class PlanetWeight{
 
 				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
 				if(choice.equals("sun")){
-					System.out.printf("Your weight on the Sun:  %16.2f lbs\n", myWeight * SUN);
+					body = "the Sun";
+					constant = SUN;
 				}
 				else if(choice.equals("mercury")){
-					System.out.printf("Your weight on Mercury:  %16.2f lbs\n", myWeight * MERCURY);
+					body = "Mercury";
+					constant = MERCURY;
 				}
 				else if(choice.equals("venus")){
-					System.out.printf("Your weight on Venus:    %16.2f lbs\n", myWeight * VENUS);
+					body = "Venus";
+					constant = VENUS;
 				}
 				else if(choice.equals("moon")){
-					System.out.printf("Your weight on the Moon: %16.2f lbs\n", myWeight * MOON);
+					body = "the Moon";
+					constant = MOON;
 				}
 				else if(choice.equals("mars")){
-					System.out.printf("Your weight on Mars:     %16.2f lbs\n", myWeight * MARS);
+					body = "Mars";
+					constant = MARS;
 				}
 				else if(choice.equals("jupiter")){
-					System.out.printf("Your weight on Jupiter:  %16.2f lbs\n", myWeight * JUPITER);
+					body = "Jupiter";
+					constant = JUPITER;
 				}
 				else if(choice.equals("saturn")){
-					System.out.printf("Your weight on Saturn:   %16.2f lbs\n", myWeight * SATURN);
+					body = "Saturn";
+					constant = SATURN;
 				}
 				else if(choice.equals("uranus")){
-					System.out.printf("Your weight on Uranus:   %16.2f lbs\n", myWeight * URANUS);
+					body = "Uranus";
+					constant = URANUS;
 				}
 				else if(choice.equals("neptune")){
-					System.out.printf("Your weight on Neptune:  %16.2f lbs\n", myWeight * NEPTUNE);
+					body = "Neptune";
+					constant = NEPTUNE;
 				}
 				else if(choice.equals("pluto")){
-					System.out.printf("Your weight on Pluto:    %16.2f lbs\n", myWeight * PLUTO);
+					body = "the Sun";
+					constant = PLUTO;
 				}
 				else if(choice.equals("quit") || choice.equals("q")){
 					break;
@@ -103,7 +116,11 @@ public class PlanetWeight{
 				}
 				else{
 					System.err.println("Please enter valid option!!");
+					error = true;
 				}
+				if(error == false)
+				System.out.printf("Your weight on " + body + ":  %16.2f lbs\n", myWeight * constant);
+
 			}while(!choice.equals("weight") || !choice.equals("quit") || !choice.equals("q"));
 		}while(choice.equals("help") || choice.equals("weight"));
 		System.out.println("Now logging off...");
